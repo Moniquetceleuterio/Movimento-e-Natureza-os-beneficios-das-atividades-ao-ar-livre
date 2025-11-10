@@ -64,6 +64,15 @@
       text-decoration: underline;
     }
 
+    img.banner {
+      display: block;
+      margin: 0 auto 30px;
+      max-width: 100%;
+      border-radius: 10px;
+      background: var(--fundo-banner);
+      box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    }
+
     @media (max-width: 768px) {
       body { margin: 20px; }
     }
@@ -71,9 +80,10 @@
 </head>
 <body>
 
-  <img src="banner.png" alt="Banner Movimento e Natureza: os benefícios das atividades ao ar livre para a saúde e o bem-estar"
-       style="display:block; margin:0 auto 30px; max-width:100%; border-radius:10px; background:var(--fundo-banner);">
+  <!-- ✅ Banner principal -->
+  <img src="banner.png" alt="Banner Movimento e Natureza: os benefícios das atividades ao ar livre para a saúde e o bem-estar" class="banner">
 
+  <!-- ✅ Título e conteúdo -->
   <h2>🌿 Movimento e Natureza: os benefícios das atividades ao ar livre para a saúde e o bem-estar</h2>
 
   <p>
@@ -100,6 +110,12 @@
     👉 <a href="#" target="_blank">Acesse o questionário IPAQ e responda aqui</a>
   </p>
 
+  <!-- 🔶 Espaço reservado para adicionar novos blocos (podcast, vídeo, questionário, referências...) -->
+  <div style="max-width:900px; margin:50px auto; border-top:2px dashed var(--cor-secundaria); padding-top:20px; color:#777; text-align:center;">
+    <em>Conteúdo complementar em desenvolvimento...</em>
+  </div>
+
+  <!-- ✅ Rodapé -->
   <footer>
     <p>© 2025 | Professora de Educação Física | Monique T. Cezário Eleutério | email: eleuterio.mtc@gmail.com</p>
     <p>Este material está licenciado sob 
