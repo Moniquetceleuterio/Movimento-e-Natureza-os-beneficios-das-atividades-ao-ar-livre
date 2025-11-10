@@ -1,1 +1,1 @@
-# Movimento e Natureza: os beneficios das atividades ao ar livre
+# Movimento e Natureza: os benefícios das atividades ao ar livre
