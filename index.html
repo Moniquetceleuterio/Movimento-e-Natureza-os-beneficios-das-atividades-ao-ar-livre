@@ -2,32 +2,27 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  
+  <title>Movimento e Natureza: os benefícios das atividades ao ar livre</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root { 
-      --cor-principal: #E67E22;      /* Laranja queimado – títulos, botões */
-      --cor-secundaria: #F4D35E;     /* Amarelo suave – ícones, destaques */
-      --fundo-banner: #FAF4E6;       /* Bege claro – topo da página */
-      --fundo-pagina: #FDFDFD;       /* Branco gelo – área de leitura */
-      --texto-principal: #2E2E2E;    /* Cinza carvão – textos */
-      --link-icone: #4A7856;         /* Verde-oliva – links e ícones */
+      --brand: #E67E22; /* Laranja queimado: mantém o padrão, com tom mais natural e energético */
     }
 
     body {
       font-family: Arial, sans-serif;
-      background: var(--fundo-pagina);
-      color: var(--texto-principal);
-      margin: 40px;
-      line-height: 1.6;
+      background:#f8f9fa;
+      color:#333;
+      margin:40px;
+      line-height:1.6;
     }
 
     h2 {
-      text-align: center;
-      font-weight: bold;
-      color: var(--cor-principal);
-      max-width: 900px;
-      margin: 40px auto 24px;
+      text-align:center;
+      font-weight:bold;
+      color:#333;
+      max-width:900px;
+      margin:40px auto 24px;
     }
 
     p {
@@ -37,57 +32,154 @@
       margin: 10px auto;
     }
 
-    a {
-      color: var(--link-icone);
-      font-weight: bold;
-      text-decoration: none;
+    ul {
+      max-width: 900px;
+      margin: 20px auto 20px;
+      line-height: 1.6;
+      text-align: justify;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .subtitulo {
+      max-width: 900px;
+      margin: 30px auto 10px;
+      font-weight: bold;
+      color: var(--brand);
+      text-align: left;
+    }
+
+    .audio-box {
+      background:#f0f4f8;
+      border:1px solid #dce3ea;
+      border-radius:10px;
+      padding:20px;
+      max-width: 640px;
+      margin: 16px auto 8px;
+      text-align:center;
+      box-shadow:0 0 10px rgba(0,0,0,.05);
+    }
+
+    .audio-box audio { width:100%; outline:none; }
+
+    .speed-bar {
+      margin-top:12px;
+      display:flex;
+      justify-content:center;
+      gap:8px;
+      flex-wrap:wrap;
+      font-size:14px;
+      align-items:center;
+    }
+
+    .speed-btn {
+      padding:6px 10px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      background:#fff;
+      cursor:pointer;
+      transition:all .2s;
+    }
+
+    .speed-btn:hover { background:var(--brand); color:#fff; border-color:var(--brand); }
+    .speed-btn.active { border-color:var(--brand); color:var(--brand); font-weight:bold; }
+
+    iframe {
+      display:block;
+      margin:24px auto;
+      border-radius:10px;
+      box-shadow:0 0 12px rgba(0,0,0,0.2);
+      transition:transform .2s;
+      max-width:100%;
+    }
+
+    iframe:hover { transform: scale(1.02); }
+
+    .avaliacao {
+      background:#eef6ff;
+      border:1px solid #c7dff7;
+      border-radius:10px;
+      padding:25px;
+      max-width:720px;
+      margin:35px auto;
+      text-align:center;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .avaliacao h3 { color:var(--brand); margin-bottom:10px; }
+
+    .avaliacao p {
+      text-align: justify;
+      text-indent: 0;
+      margin:8px auto;
+      max-width:620px;
+      line-height:1.5;
+    }
+
+    .avaliacao a {
+      display:inline-block;
+      background:var(--brand);
+      color:#fff;
+      padding:10px 18px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-top:14px;
+      transition:background .3s;
+    }
+
+    .avaliacao a:hover { background:#b85e17; }
+
+    .referencias {
+      max-width:900px;
+      margin:42px auto 0;
+      text-align:left;
+      font-size:.9em;
+      line-height:1.2;
+    }
+
+    .referencias h3 {
+      text-align:left;
+      margin:0 0 8px 0;
+      color:var(--brand);
+      font-size:1.1em;
+      font-weight:bold;
+    }
+
+    .referencias p {
+      text-align:left;
+      text-indent:0;
+      margin:4px 0;
     }
 
     footer {
-      text-align: center;
-      margin-top: 48px;
-      font-size: 14px;
-      color: #fff;
-      line-height: 1.6;
-      background: var(--cor-principal);
-      padding: 24px 10px;
-      border-radius: 8px;
+      text-align:center;
+      margin-top:48px;
+      font-size:14px;
+      color:#fff;
+      line-height:1.6;
+      background:var(--brand);
+      padding:24px 10px;
+      border-radius:8px;
     }
 
     footer a {
-      color: #fff;
-      font-weight: bold;
+      color:#fff;
+      font-weight:bold;
       text-decoration: underline;
     }
 
-    img.banner {
-      display: block;
-      margin: 0 auto 30px;
-      max-width: 100%;
-      border-radius: 10px;
-      background: var(--fundo-banner);
-      box-shadow: 0 0 12px rgba(0,0,0,0.15);
-    }
-
     @media (max-width: 768px) {
-      body { margin: 20px; }
+      body { margin:20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ Banner principal -->
-  <img src="banner.png" alt="Banner Movimento e Natureza: os benefícios das atividades ao ar livre para a saúde e o bem-estar" class="banner">
-
-  <!-- ✅ Título e conteúdo -->
-  <h2>Movimento e Natureza: os benefícios das atividades ao ar livre para a saúde e o bem-estar</h2>
+  <!-- ✅ Banner -->
+  <img src="banner.png" alt="Banner Movimento e Natureza: os benefícios das atividades ao ar livre"
+       style="display:block; margin:0 auto 30px; max-width:100%; border-radius:10px;">
 
   <p>
-    Nesta atividade, você vai explorar o tema <strong>“Movimento e Natureza: os benefícios das atividades ao ar livre”</strong>, entendendo como a prática de atividades físicas e esportes ao ar livre pode contribuir para uma vida mais saudável, equilibrada e sustentável.
+    Nesta atividade, você vai explorar o tema <strong>“Movimento e Natureza”</strong>, entendendo como a prática de atividades físicas e esportes ao ar livre pode contribuir para uma vida mais saudável, equilibrada e sustentável.
   </p>
 
   <p>
@@ -98,32 +190,90 @@
     Mais do que praticar exercícios, este estudo convida você a reconectar-se com o ambiente e a compreender que cuidar da saúde também envolve respeitar e preservar a natureza. Caminhar, pedalar, nadar, escalar ou apenas se movimentar ao ar livre são formas simples de promover o bem-estar e desenvolver uma consciência ambiental ativa.
   </p>
 
-  <p>
-    Depois de refletir sobre o movimento e seus benefícios, é importante descobrir como está o seu próprio nível de atividade física. Para isso, será disponibilizado o <strong>Questionário Internacional de Atividade Física (IPAQ)</strong> — uma ferramenta reconhecida mundialmente e utilizada para avaliar quanto tempo as pessoas passam se movimentando no dia a dia.
-  </p>
+  <p class="subtitulo">Para desenvolver esta proposta:</p>
+  <ul>
+    <li>Ouça o podcast <em><strong>“O Movimento que Transforma: benefícios da prática ao ar livre”</strong></em>, que apresenta reflexões sobre o impacto das atividades ao ar livre na saúde física, mental e social;</li>
+    <li>Assista ao vídeo <em><strong>“Quebrando o Ciclo: Explore mais, Viva mais”</strong></em>, observando como a mudança de hábitos e a reconexão com a natureza favorecem o bem-estar e a sustentabilidade;</li>
+    <li>Responda ao questionário <strong>"Autoavaliação IPAQ"</strong> e descubra qual é o seu nível atual de atividade física — muito ativo, ativo, irregularmente ativo ou sedentário.</li>
+  </ul>
 
   <p>
-    Ao acessar o link abaixo, você poderá responder ao questionário IPAQ, analisar sua rotina e identificar em qual categoria se enquadra: muito ativo, ativo, irregularmente ativo ou sedentário. Essa autoavaliação será um ponto de partida para repensar hábitos e planejar novas formas de se manter em movimento, dentro e fora da escola.
+    O objetivo é que, ao final, você compreenda como o movimento ao ar livre fortalece o corpo, a mente e o vínculo com o meio ambiente, estimulando hábitos mais saudáveis e sustentáveis.
   </p>
 
-  <p style="text-align:center; margin-top:30px;">
-    👉 <a href="#" target="_blank">Acesse o questionário IPAQ e responda aqui</a>
-  </p>
+  <h2>🎧 <strong>Podcast: O Movimento que Transforma — benefícios da prática ao ar livre</strong></h2>
 
-  <!-- 🔶 Espaço reservado para adicionar novos blocos (podcast, vídeo, questionário, referências...) -->
-  <div style="max-width:900px; margin:50px auto; border-top:2px dashed var(--cor-secundaria); padding-top:20px; color:#777; text-align:center;">
-    <em>Conteúdo complementar em desenvolvimento...</em>
+  <div class="audio-box">
+    <audio id="meuAudio" controls preload="metadata">
+      <source src="O_Movimento_que_Transforma_beneficios_da_pratica_ao_ar_livre.m4a" type="audio/mpeg">
+      Seu navegador não suporta a reprodução de áudio.
+    </audio>
+    <div class="speed-bar" id="speedBar">
+      <span>Velocidade:</span>
+      <button class="speed-btn" data-rate="0.75">0,75x</button>
+      <button class="speed-btn" data-rate="1">1x</button>
+      <button class="speed-btn" data-rate="1.25">1,25x</button>
+      <button class="speed-btn" data-rate="1.5">1,5x</button>
+      <button class="speed-btn" data-rate="2">2x</button>
+      <span id="rateNow">(atual: 1x)</span>
+    </div>
   </div>
 
-  <!-- ✅ Rodapé -->
+  <h2>📽️ <strong>Vídeo: Quebrando o Ciclo — Explore mais, Viva mais</strong></h2>
+
+  <video width="700" height="394" controls
+         style="display:block; margin:24px auto; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.2); max-width:100%;">
+    <source src="Quebrando_o_Ciclo_Explore_mais_Viva_mais.mp4" type="video/mp4">
+    Seu navegador não suporta a reprodução de vídeo.
+  </video>
+
+  <div class="avaliacao">
+    <h3>📝 Autoavaliação: Questionário IPAQ</h3>
+    <p>Responda ao questionário para identificar o seu nível de atividade física e refletir sobre suas práticas cotidianas de movimento.</p>
+    <a href="#" target="_blank" rel="noopener noreferrer">Acessar questionário IPAQ</a>
+  </div>
+
+  <div class="referencias">
+    <h3>Referências</h3>
+    <p>WORLD HEALTH ORGANIZATION. <em>Global Recommendations on Physical Activity for Health</em>. Geneva: WHO, 2010.</p>
+    <p>EWERT, A.; SIBTHORP, J. <em>Outdoor Adventure Education: Foundations, Theory, and Research</em>. Human Kinetics, 2014.</p>
+    <p>KAPLAN, R.; KAPLAN, S. <em>The Experience of Nature: A Psychological Perspective</em>. Cambridge University Press, 1989.</p>
+    <p>NAHAS, M. V. <em>Atividade Física, Saúde e Qualidade de Vida</em>. 7ª ed. Londrina: Midiograf, 2017.</p>
+  </div>
+
   <footer>
     <p>© 2025 | Professora de Educação Física | Monique T. Cezário Eleutério | email: eleuterio.mtc@gmail.com</p>
     <p>Este material está licenciado sob 
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">
-        CC BY-NC-SA 4.0
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="color:#ffffff; text-decoration:none; font-weight:bold;">
+        <strong>CC BY-NC-SA 4.0</strong>
       </a> | Uso educacional não comercial autorizado com citação.
     </p>
   </footer>
+
+  <script>
+    (function () {
+      const audio = document.getElementById('meuAudio');
+      const bar = document.getElementById('speedBar');
+      const rateNow = document.getElementById('rateNow');
+
+      function setActive(rate) {
+        document.querySelectorAll('.speed-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.rate === String(rate));
+        });
+        rateNow.textContent = `(atual: ${String(rate).replace('.', ',')}x)`;
+      }
+
+      bar.addEventListener('click', function (e) {
+        const btn = e.target.closest('.speed-btn');
+        if (!btn) return;
+        const rate = parseFloat(btn.dataset.rate);
+        audio.playbackRate = rate;
+        setActive(rate);
+      });
+
+      setActive(1);
+    })();
+  </script>
 
 </body>
 </html>
