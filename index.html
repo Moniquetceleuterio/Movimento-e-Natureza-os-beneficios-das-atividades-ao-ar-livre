@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root { 
-      --brand: #E67E22; /* Laranja queimado: mantém o padrão, com tom mais natural e energético */
+      --brand: #E67E22; /* Laranja queimado: mantém o padrão natural e energético */
     }
 
     body {
@@ -201,11 +201,12 @@
     O objetivo é que, ao final, você compreenda como o movimento ao ar livre fortalece o corpo, a mente e o vínculo com o meio ambiente, estimulando hábitos mais saudáveis e sustentáveis.
   </p>
 
-  <h2>🎧 <strong>Podcast: O Movimento que Transforma — benefícios da prática ao ar livre</strong></h2>
+  <!-- 🎧 PODCAST -->
+  <h2>🎧 <strong>O Movimento que Transforma — benefícios da prática ao ar livre</strong></h2>
 
   <div class="audio-box">
     <audio id="meuAudio" controls preload="metadata">
-      <source src="O_Movimento_que_Transforma_beneficios_da_pratica_ao_ar_livre.m4a" type="audio/mpeg">
+      <source src="O Movimento que Transforma: benefícios da prática ao ar livre.m4a" type="audio/mpeg">
       Seu navegador não suporta a reprodução de áudio.
     </audio>
     <div class="speed-bar" id="speedBar">
@@ -219,20 +220,32 @@
     </div>
   </div>
 
-  <h2>📽️ <strong>Vídeo: Quebrando o Ciclo — Explore mais, Viva mais</strong></h2>
+  <!-- 🎬 VÍDEO DO YOUTUBE -->
+  <h2>📽️ <strong>Quebrando o Ciclo — Explore mais, Viva mais</strong></h2>
 
-  <video width="700" height="394" controls
-         style="display:block; margin:24px auto; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.2); max-width:100%;">
-    <source src="Quebrando_o_Ciclo_Explore_mais_Viva_mais.mp4" type="video/mp4">
-    Seu navegador não suporta a reprodução de vídeo.
-  </video>
+  <iframe
+    width="700"
+    height="394"
+    src="https://www.youtube.com/embed/pePRLqP-sjs?rel=0"
+    title="Quebrando o Ciclo: Explore mais, Viva mais"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
 
+  <p style="text-align:center;">
+    <a href="https://youtu.be/pePRLqP-sjs" target="_blank" rel="noopener noreferrer" style="color:#006D6F; font-weight:bold; text-decoration:none;">
+      🔗 Abrir vídeo no YouTube
+    </a>
+  </p>
+
+  <!-- 📝 AVALIAÇÃO -->
   <div class="avaliacao">
     <h3>📝 Autoavaliação: Questionário IPAQ</h3>
     <p>Responda ao questionário para identificar o seu nível de atividade física e refletir sobre suas práticas cotidianas de movimento.</p>
     <a href="#" target="_blank" rel="noopener noreferrer">Acessar questionário IPAQ</a>
   </div>
 
+  <!-- 📚 REFERÊNCIAS -->
   <div class="referencias">
     <h3>Referências</h3>
     <p>WORLD HEALTH ORGANIZATION. <em>Global Recommendations on Physical Activity for Health</em>. Geneva: WHO, 2010.</p>
@@ -250,6 +263,7 @@
     </p>
   </footer>
 
+  <!-- 🎵 Controle da velocidade do áudio -->
   <script>
     (function () {
       const audio = document.getElementById('meuAudio');
