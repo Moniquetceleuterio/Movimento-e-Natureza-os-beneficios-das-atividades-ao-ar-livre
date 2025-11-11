@@ -14,11 +14,10 @@ O conteúdo está disponível em formato de **página web (HTML)**, integrando *
 
 ## Estrutura do projeto
 
-- `index.html` → Página principal construída em **HTML + CSS + JavaScript**, com layout temático e responsivo.  
-- **O Movimento que Transforma – benefícios da prática ao ar livre (.m4a)** → Áudio do podcast.  
-- `banner.png` → Imagem de cabeçalho da página.  
-- `README.md` → Documento de apresentação do repositório.  
-
+`index.html` → Página principal, construída em **HTML + CSS + JavaScript**, com layout responsivo.  
+`O_Movimento_que_Transforma_Beneficios_da_Pratica_ao_Ar_Livre.m4a` → Áudio do podcast.  
+`Quebrando_o_Ciclo_Explore_Mais_Viva_Mais.mp4` → Vídeo incorporado na página.  
+`README.md` → Documento de apresentação do repositório.  
 
 ---
 
